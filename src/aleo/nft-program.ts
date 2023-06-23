@@ -1,6 +1,6 @@
-export const NFTProgramId = 'leo_nft_test_1.aleo';
+export const NFTProgramId = 'leo_nft_yp7u0d.aleo';
 
-export const NFTProgram = `program leo_nft_test_1.aleo;
+export const NFTProgram = `program leo_nft_yp7u0d.aleo;
 
 struct TokenId:
     data1 as u128;
@@ -50,7 +50,7 @@ function initialize_collection:
     input r0 as u128.public;
     input r1 as u128.public;
     input r2 as BaseURI.public;
-    assert.eq self.caller aleo1uran94ddjnvdr0neh8d0mzxuvv77pyprnp7jmzpkuh7950t46qyqnsadey;
+    assert.eq self.caller aleo14wquwlnx7vardrckxdg7su3r0076ahjamp295kcjvzrsg38qgcrsyp7u0d;
 
     finalize r0 r1 r2;
 
@@ -75,7 +75,7 @@ function add_nft:
     input r0 as TokenId.public;
     input r1 as scalar.public;
     input r2 as u8.public;
-    assert.eq self.caller aleo1uran94ddjnvdr0neh8d0mzxuvv77pyprnp7jmzpkuh7950t46qyqnsadey;
+    assert.eq self.caller aleo14wquwlnx7vardrckxdg7su3r0076ahjamp295kcjvzrsg38qgcrsyp7u0d;
     hash.bhp256 r0 into r3;    commit.bhp256 r3 r1 into r4;
     finalize r4 r2;
 
@@ -95,7 +95,7 @@ finalize add_nft:
 function add_minter:
     input r0 as address.public;
     input r1 as u8.public;
-    assert.eq self.caller aleo1uran94ddjnvdr0neh8d0mzxuvv77pyprnp7jmzpkuh7950t46qyqnsadey;
+    assert.eq self.caller aleo14wquwlnx7vardrckxdg7su3r0076ahjamp295kcjvzrsg38qgcrsyp7u0d;
 
     finalize r0 r1;
 
@@ -109,7 +109,7 @@ finalize add_minter:
 
 function set_mint_status:
     input r0 as u128.public;
-    assert.eq self.caller aleo1uran94ddjnvdr0neh8d0mzxuvv77pyprnp7jmzpkuh7950t46qyqnsadey;
+    assert.eq self.caller aleo14wquwlnx7vardrckxdg7su3r0076ahjamp295kcjvzrsg38qgcrsyp7u0d;
 
     finalize r0;
 
@@ -122,7 +122,7 @@ finalize set_mint_status:
 
 function update_symbol:
     input r0 as u128.public;
-    assert.eq self.caller aleo1uran94ddjnvdr0neh8d0mzxuvv77pyprnp7jmzpkuh7950t46qyqnsadey;
+    assert.eq self.caller aleo14wquwlnx7vardrckxdg7su3r0076ahjamp295kcjvzrsg38qgcrsyp7u0d;
 
     finalize r0;
 
@@ -135,7 +135,7 @@ finalize update_symbol:
 
 function update_base_uri:
     input r0 as BaseURI.public;
-    assert.eq self.caller aleo1uran94ddjnvdr0neh8d0mzxuvv77pyprnp7jmzpkuh7950t46qyqnsadey;
+    assert.eq self.caller aleo14wquwlnx7vardrckxdg7su3r0076ahjamp295kcjvzrsg38qgcrsyp7u0d;
 
     finalize r0;
 
@@ -150,7 +150,7 @@ finalize update_base_uri:
 
 
 function freeze:
-    assert.eq self.caller aleo1uran94ddjnvdr0neh8d0mzxuvv77pyprnp7jmzpkuh7950t46qyqnsadey;
+    assert.eq self.caller aleo14wquwlnx7vardrckxdg7su3r0076ahjamp295kcjvzrsg38qgcrsyp7u0d;
 
     finalize;
 
